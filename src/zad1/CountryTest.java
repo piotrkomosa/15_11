@@ -13,13 +13,13 @@ public class CountryTest {
 
     public static void main(String[] args) {
         try (BufferedReader br = new BufferedReader(new FileReader(new File("countries.csv")))) {
-            Map<String, Country> customerMap = getCountries(br);
-            printCustomer(customerMap);
+            Map<String, Country> countiresMap = getCountries(br);
+            printCountry(countiresMap);
         } catch (IOException | InputMismatchException ex) {
             System.err.println(ex);
         }
     }
-    private static void printCustomer(Map<String, Country> customerMap) {
+    private static void printCountry(Map<String, Country> customerMap) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Podaj kod kraju, o którym chcesz zobaczyć informacje:");
         String indeks = scanner.nextLine();
@@ -29,15 +29,14 @@ public class CountryTest {
             System.out.println("Kraj o takim kodzie nie istnieje");
         }
     }
-        private static Map<String, Country> getCountries(BufferedReader br) throws IOException{
-            Map<String, Country> countiresMap = new HashMap<>();
-            String line;
-            while ((line = br.readLine()) !=null){
-                String[] country = line.split(";");
-                String code = country[0];
-
-                countiresMap.put(code, new Country(code,country[1],country[2]));
-            }
-            return countiresMap;
+    private static Map<String, Country> getCountries(BufferedReader br) throws IOException{
+        Map<String, Country> countiresMap = new HashMap<>();
+        String line;
+        while ((line = br.readLine()) !=null){
+            String[] country = line.split(";");
+            String code = country[0];
+            countiresMap.put(code, new Country(code,country[1],country[2]));
         }
+        return countiresMap;
     }
+}
