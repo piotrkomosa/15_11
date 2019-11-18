@@ -34,7 +34,8 @@ public class CountryTest {
         while ((line = br.readLine()) !=null){
             String[] country = line.split(";");
             String code = country[0];
-            countiresMap.put(code, new Country(code,country[1],country[2]));
+            int population = Integer.parseInt(country[2]);
+            countiresMap.put(code, new Country(code,country[1],population));
         }
         return countiresMap;
     }
