@@ -23,8 +23,7 @@ public class VehicleTest {
             case 1:
                 Vehicle vehicle1 = vehicles.peek();
                 System.out.println(vehicle1);
-                Vehicle vehicle = vehicles.poll();
-
+                break;
             case 2:
                 Vehicle vehicle2 = vehicles.poll();
                 System.out.println(vehicle2);

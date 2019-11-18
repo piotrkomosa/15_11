@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.InputMismatchException;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -15,7 +14,7 @@ public class CountryTest {
         try (BufferedReader br = new BufferedReader(new FileReader(new File("countries.csv")))) {
             Map<String, Country> countiresMap = getCountries(br);
             printCountry(countiresMap);
-        } catch (IOException | InputMismatchException ex) {
+        } catch (IOException ex) {
             System.err.println(ex);
         }
     }
