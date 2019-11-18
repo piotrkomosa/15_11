@@ -16,13 +16,9 @@ public class VehicleTest {
         Scanner scanner = new Scanner(System.in);
         int chooseOption = scanner.nextInt();
         Iterator<Vehicle> iterator = vehicles.iterator();
-        do {
-            switch (chooseOption) {
+        do { switch (chooseOption) {
                 case 1:
-                    System.out.println("Podaj dane pojadzu:");
-                    if(iterator.hasNext()) {
-                        vehicles.peek();
-                        ((LinkedList<Vehicle>) vehicles).getLast();
+                    while (iterator.hasNext()) {
                     }
                     break;
                 case 2:
@@ -30,6 +26,7 @@ public class VehicleTest {
                     break;
             }
         } while (scanner.nextInt() == 0);
+        System.out.println("koniec");
     }
 }
 
