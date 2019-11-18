@@ -7,15 +7,15 @@ public class Vehicle {
     private  String model;
     private  String prodcutionYear;
     private  double mileage;
-    private  String VIN;
+    private  String vinNumber;
 
-    public Vehicle(String type, String producer, String model, String prodcutionYear, double mileage, String VIN) {
+    public Vehicle(String type, String producer, String model, String prodcutionYear, double mileage, String vinNumber) {
         this.type = type;
         this.producer = producer;
         this.model = model;
         this.prodcutionYear = prodcutionYear;
         this.mileage = mileage;
-        this.VIN = VIN;
+        this.vinNumber = vinNumber;
     }
 
     public String getType() {
@@ -58,16 +58,16 @@ public class Vehicle {
         this.mileage = mileage;
     }
 
-    public String getVIN() {
-        return VIN;
+    public String getvinNumber() {
+        return vinNumber;
     }
 
-    public void setVIN(String VIN) {
-        this.VIN = VIN;
+    public void setvinNumber(String VIN) {
+        this.vinNumber = vinNumber;
     }
 
     @Override
     public String toString() {
-        return type +"; "+ producer +"; "+ model +"; "+ prodcutionYear +"; "+ mileage +"; "+ VIN;
+        return type +"; "+ producer +"; "+ model +"; "+ prodcutionYear +"; "+ mileage +"; "+ vinNumber;
     }
 }
