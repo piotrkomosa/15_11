@@ -2,12 +2,15 @@ package zad2;
 
 public class Vehicle {
 
-    private  String type;
-    private  String producer;
-    private  String model;
-    private  String prodcutionYear;
-    private  double mileage;
-    private  String vinNumber;
+    private String type;
+    private String producer;
+    private String model;
+    private String prodcutionYear;
+    private double mileage;
+    private String vinNumber;
+
+    public Vehicle() {
+    }
 
     public Vehicle(String type, String producer, String model, String prodcutionYear, double mileage, String vinNumber) {
         this.type = type;
@@ -62,12 +65,13 @@ public class Vehicle {
         return vinNumber;
     }
 
-    public void setvinNumber(String VIN) {
+    public void setvinNumber(String vinNumber) {
         this.vinNumber = vinNumber;
     }
 
     @Override
     public String toString() {
-        return type +"; "+ producer +"; "+ model +"; "+ prodcutionYear +"; "+ mileage +"; "+ vinNumber;
+        return type + "; " + producer + "; " + model + "; " + prodcutionYear + "; " + mileage + ";" + vinNumber+ "\n" ;
     }
 }
+
