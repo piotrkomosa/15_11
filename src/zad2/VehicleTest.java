@@ -16,8 +16,7 @@ public class VehicleTest {
         Scanner scanner = new Scanner(System.in);
         int chooseOption = 3;
         while (chooseOption != 0 || vehicles == null) {
-            System.out.println(
-                    "Wybierz opcje: \n 1 - Dodaj auto do kolejki \n 2 - Zrób przegląd auta pierwszego w kolejce \n 0 - Wyjście z programu");
+            System.out.println("Wybierz opcje: \n 1 - Dodaj auto do kolejki \n 2 - Zrób przegląd auta pierwszego w kolejce \n 0 - Wyjście z programu");
             chooseOption = scanner.nextInt();
             scanner.nextLine();
             if (chooseOption < 0 || chooseOption > 2) {
@@ -25,8 +24,6 @@ public class VehicleTest {
             } else {
                 switch (chooseOption) {
                     case 1:
-                        System.out.println("Lista aut w kolejce: ");
-                        System.out.println(vehicles);
                         Vehicle vehicle = new Vehicle();
                         System.out.println("Podaj dane nowego auta do przeglądu:");
                         System.out.print("Typ: ");
@@ -52,8 +49,7 @@ public class VehicleTest {
                         vehicles.poll();
                         System.out.println("Lista aut do przeglądu:");
                         System.out.println(vehicles);
-                        break;
-                }
+                        break; }
                 if (vehicles.size() < 1) {
                     chooseOption = 0;
                 }
